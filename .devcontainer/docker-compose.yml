@@ -49,18 +49,18 @@ services:
       - "4443:4443"
       - "4444:4444"
 
-  galaxy:
-   image: butomo1989/docker-android-x86-8.1
-   privileged: true
-   depends_on:
-     - hub
-   ports:
-     - "6080:6080"
-   environment:
-     - DEVICE=Samsung Galaxy S6
-     - CONNECT_TO_GRID=True
-     - APPIUM=true
-     - SELENIUM_HOST=hub
-     - MOBILE_WEB_TEST=False
-     - AUTO_RECORD=True
+  # galaxy:
+  #  image: butomo1989/docker-android-x86-8.1
+  #  privileged: true
+  #  depends_on:
+  #    - hub
+  #  ports:
+  #    - "6080:6080"
+  #  environment:
+  #    - DEVICE=Samsung Galaxy S6
+  #    - CONNECT_TO_GRID=True
+  #    - APPIUM=true
+  #    - SELENIUM_HOST=hub
+  #    - MOBILE_WEB_TEST=False
+  #    - AUTO_RECORD=True
   
