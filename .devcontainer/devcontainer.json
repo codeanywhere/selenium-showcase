@@ -13,7 +13,7 @@
 			"version": "7.0"
 		}
 	},
-	"workspaceFolder": "/workspaces/SeleniumTest",
+	"workspaceFolder": "/workspaces/selenium-showcase",
 	"customizations": {
 		"vscode": {
 		      "extensions": [
