@@ -48,19 +48,26 @@ services:
       - "4442:4442"
       - "4443:4443"
       - "4444:4444"
+    volumes:
+      - ..:/workspaces/selenium-showcase
 
-  # galaxy:
-  #  image: budtmo/docker-android:emulator_13.0
-  #  privileged: true
-  #  depends_on:
-  #    - hub
-  #  ports:
-  #    - "6080:6080"
-  #  environment:
-  #    - DEVICE=Samsung Galaxy S10
-  #    - CONNECT_TO_GRID=true
-  #    - APPIUM=true
-  #    - SELENIUM_HOST=hub
-  #    - MOBILE_WEB_TEST=false
-  #    - AUTO_RECORD=true
+  galaxy:
+    image: budtmo/docker-android:emulator_11.0
+    privileged: true
+    devices:
+      - /dev/kvm
+    depends_on:
+      - hub
+    ports:
+      - "6080:6080"
+    environment:
+      - EMULATOR_DEVICE=Samsung Galaxy S10
+      - CONNECT_TO_GRID=true
+      - APPIUM=true
+      - SELENIUM_HOST=hub
+      - MOBILE_WEB_TEST=false
+      - AUTO_RECORD=true
+      - WEB_VNC=true
+      - EMULATOR_DATA_PARTITION=2g
+      - WEB_LOG=true
   

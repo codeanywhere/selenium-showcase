@@ -1,7 +1,7 @@
 {
-	"name": "Selenium Test Devcontainer Example",
-  	"dockerComposeFile": "docker-compose.yml",
-  	"service": "hub",
+	"name": "SeleniumShowcase",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "hub",
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
 			"installZsh": true,
@@ -16,10 +16,10 @@
 	"workspaceFolder": "/workspaces/selenium-showcase",
 	"customizations": {
 		"vscode": {
-		      "extensions": [
-				"muhammad-sammy.csharp"
-		      ]
-		    }
+      "extensions": [
+        "muhammad-sammy.csharp"
+      ]
+    }
 	},
 	"postCreateCommand": "dotnet restore",
 	"remoteUser": "seluser"
